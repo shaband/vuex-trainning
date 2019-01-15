@@ -6,6 +6,8 @@
                 <span class="price">£{{ product.price }}</span>
             </li>
         </ul>
+
+        <button @click="reducePrice"> reduce price</button>
     </div>
 </template>
 <script>
@@ -16,6 +18,12 @@
             },
             productsSale() {
                 return this.$store.getters.productsSale;
+            }
+        },
+        methods: {
+            reducePrice() {
+                this.$store.commit('reducePrice');
+
             }
         }
     }
