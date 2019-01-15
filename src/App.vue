@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <products-one ></products-one>
+    <products-two ></products-two>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+import productsOne from './components/productsOne.vue';
+import productsTwo from './components/productsTwo.vue';
+  export default {
+    name: 'app',
+    components: {'products-one':productsOne, 'products-two':productsTwo},
+    data() {
+      return {}
+    },
+
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+body{
+    font-family: Ubuntu;
+    color: #555;
 }
 </style>
